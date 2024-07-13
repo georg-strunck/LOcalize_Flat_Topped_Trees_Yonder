@@ -36,7 +36,7 @@ def show_pcd_of_name(file):
 # Make sure you are in the right working directory and that the relative paths are relative to that, not the folder th code is in
 print("Current working directory:", os.getcwd())
 # Define the root folder where you want to search for .pcd files
-root_folder_or_file = "../LOFTY_datasets/biodivX/07-prec-300-10-default-Project_2024-04-25_16-47-dense_poin.pcd"  # Replace with your root folder path
+root_folder_or_file = #"../LOFTY_datasets/biodivX/07-prec-300-10-default-Project_2024-04-25_16-47-dense_poin.pcd"  # Replace with your root folder path
 
 # Open single file
 show_pcd_of_name(root_folder_or_file)

@@ -7,8 +7,8 @@ import numpy as np
 print("Current working directory:", os.getcwd())
 
 # Define the source folder with .laz files and the destination folder for .pcd files
-source_folder = os.path.abspath("../LOFTY_datasets/biodivX")
-destination_folder = os.path.abspath("../LOFTY_datasets/biodivX")
+source_folder = os.path.abspath("../LOFTY_datasets/biodivX_finals")
+destination_folder = os.path.abspath("../LOFTY_datasets/biodivX_finals")
 # Print the paths to verify
 print("Source folder path:", source_folder)
 print("Destination folder path:", destination_folder)
@@ -47,50 +47,5 @@ def convert_laz_to_pcd(src_folder, dest_folder):
 convert_laz_to_pcd(source_folder, destination_folder)
 
 print("Batch conversion of .laz files to .pcd files complete.")
-
-
-
-
-# import laspy
-# import numpy as np
-# import os
-
-# def lofty_convert_laz_to_pcd(input_file_path, output_file_path):
-
-#     # Load the .laz file
-#     in_laz = laspy.read(input_file_path)
-
-#     # Access the point cloud data
-#     points = np.vstack((in_laz.x, in_laz.y, in_laz.z)).T
-
-#     # Create a new .pcd file
-#     header = """\
-#     # .PCD v.7 - Point Cloud Data file format
-#     VERSION .7
-#     FIELDS x y z
-#     SIZE 4 4 4
-#     TYPE F F F
-#     COUNT 1 1 1
-#     WIDTH {}
-#     HEIGHT 1
-#     VIEWPOINT 0 0 0 1 0 0 0
-#     POINTS {}
-#     DATA ascii
-#     """.format(len(points), len(points))
-
-#     # Write the header and point cloud data to the .pcd file
-#     with open(output_file_path, "w") as pcd_file:
-#         pcd_file.write(header)
-#         np.savetxt(pcd_file, points, fmt="%f %f %f")
-
-#     return print(f".laz to .pcd conversion complete. Output saved as {output_file_path}")
-
-# ## Single file conversion manually
-# # Replace with the path to your .laz file
-# input_laz_file = "LOFTY_datasets\syssifoss\BR04\TLS\TLS-on_BR04_2019-07-04.laz"
-# # Replace with the desired output .pcd file path
-# output_pcd_file = os.path.splitext(os.path.basename(input_laz_file))[0] + '.pcd'
-# # Run conversion
-# lofty_convert_laz_to_pcd(input_laz_file, output_pcd_file)
 
 

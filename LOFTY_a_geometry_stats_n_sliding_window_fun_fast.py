@@ -193,7 +193,7 @@ def lofty_calc_canopy_flatness_per_window(pcd_in, bboxes3d_list, downsampling_fa
     return landingsite_flatness, landingsite_center_position
     
     
-pcd = o3d.io.read_point_cloud("../LOFTY_datasets/biodivX/07-prec-300-10-default-Project_2024-04-25_16-47-dense_poin.pcd")#("ALS-on_KA10_2019-07-05_300m.pcd")
+pcd = o3d.io.read_point_cloud("../LOFTY_datasets/biodivX/07-prec-300-10-default-Project_2024-04-25_16-47-dense_poin.pcd")#"../LOFTY_datasets/biodivX_finals/no-diag-dense_point_cloud.pcd")#("ALS-on_KA10_2019-07-05_300m.pcd")
 
 my_kernel = 4
 skip_points = 5
